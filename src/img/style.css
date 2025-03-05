@@ -1,0 +1,441 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  outline: transparent;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes"), url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes"), url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: local("TT Lakes"), url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  font-family: "TT Lakes", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #1b1c21;
+  background-color: #f8f8f8;
+}
+
+.container {
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.header {
+  background-color: #fff;
+  padding: 18px 0;
+  border-bottom: 1px #d9fff5 solid;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__left-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu__button {
+  width: 40px;
+  height: 40px;
+  padding: 12px 11px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 8px;
+  margin-right: 16px;
+}
+
+.menu__button:last-child {
+  margin-right: 0;
+}
+
+.burger {
+  background-image: url(../images/burger.svg);
+}
+
+.menu__contacts {
+  display: none;
+}
+
+.call {
+  background-image: url(../images/call.svg);
+}
+
+.chat {
+  background-image: url(../images/chat.svg);
+}
+
+.profile {
+  background-image: url(../images/profile.svg);
+}
+
+.request {
+  position: relative;
+  background-image: url(../images/request.svg);
+}
+
+.request::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  right: 60px;
+  top: 5px;
+}
+
+.status {
+  background-image: url(../images/status.svg);
+}
+
+.services {
+  padding: 24px 0 35px;
+}
+
+.services__top {
+  margin-bottom: 24px;
+}
+
+.services__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.4;
+}
+
+.services__title::before {
+  content: "";
+  width: 4px;
+  height: 40px;
+  background-color: #41f6d7;
+  position: absolute;
+  left: 0;
+  border-radius: 2px;
+}
+
+.services__menu {
+  display: none;
+}
+
+.services__inner {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.services__inner::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    #f8f8f8 0.04%,
+    rgba(248, 248, 248, 0) 100%
+  );
+  width: 24px;
+  height: 40px;
+}
+
+.services__list {
+  display: flex;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.services__item {
+  height: 40px;
+  padding-top: 8px;
+}
+
+.services__link {
+  padding: 8px;
+  color: #7e7e82;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  white-space: nowrap;
+  border: 2px solid transparent;
+}
+
+.services__link:hover {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+  background: #fff;
+  transition: all 0.5s;
+}
+
+.services__content {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.services__text {
+  margin-bottom: 16px;
+}
+
+.services__text--tablet,
+.services__text--desctop {
+  display: none;
+}
+
+.show-more {
+  display: block;
+  width: 135px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 32px;
+  color: #1b1c21;
+  text-decoration: none;
+  position: relative;
+}
+
+.services__show-more {
+  margin-bottom: 20px;
+}
+
+.services__show-more::before {
+  content: url(../images/show-more.svg);
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.services__img {
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1100px;
+    padding: 0 40px 0 24px;
+    position: relative;
+  }
+
+  .menu__left-column {
+    width: 180px;
+  }
+
+  .burger {
+    position: relative;
+  }
+
+  .burger::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    left: 60px;
+    top: 5px;
+  }
+
+  .menu__right-column {
+    display: flex;
+  }
+
+  .menu__contacts {
+    display: block;
+    margin-right: 42px;
+  }
+
+  .services__inner {
+    margin-bottom: 32px;
+  }
+
+  .services__bottom {
+    display: flex;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .services__content {
+    min-height: 208px;
+    padding: 0 24px;
+  }
+
+  .services__text {
+    line-height: 1.4;
+  }
+
+  .services__text--tablet {
+    display: block;
+    margin-top: 25px;
+  }
+
+  .services__img {
+    min-width: 360px;
+    max-height: 208px;
+    margin: 0 40px 0 15px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .header {
+    display: none;
+  }
+
+  .container {
+    padding: 0 25px 0 32px;
+  }
+
+  .services__top {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 8px 0;
+    align-items: center;
+  }
+
+  .services__menu {
+    display: block;
+  }
+
+  .menu__button {
+    position: relative;
+  }
+
+  .menu__button:last-child {
+    margin-left: 160px;
+  }
+
+  .menu__button::before {
+    position: absolute;
+    width: 125px;
+    height: 24px;
+    right: 50px;
+    top: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .request::before {
+    content: "Оставить заявку";
+    position: absolute;
+    width: 130px;
+    height: 24px;
+    background-color: transparent;
+    right: 50px;
+    top: 10px;
+  }
+
+  .status::before {
+    content: "Статус ремонта";
+  }
+
+  .services__inner {
+    margin-bottom: 16px;
+  }
+  .services__inner::before {
+    background: none;
+  }
+
+  .services__list {
+    flex-wrap: wrap;
+  }
+
+  .services__link {
+    padding: 8px 14px;
+  }
+
+  .services__bottom {
+    min-height: 307px;
+  }
+
+  .services__content {
+    width: 50%;
+    margin: 0;
+    padding: 0 30px;
+  }
+
+  .services__text--desctop {
+    display: inline;
+  }
+
+  .services__img {
+    max-height: 307px;
+    max-width: 530px;
+    margin: 0 28px 0 0;
+  }
+}

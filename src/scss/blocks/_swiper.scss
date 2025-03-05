@@ -1,0 +1,45 @@
+.swiper {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background: linear-gradient(
+      270deg,
+      $bgColor 0.04%,
+      rgba(248, 248, 248, 0) 100%
+    );
+    width: 24px;
+    height: 80px;
+  }
+
+  &-slide {
+    width: 240px;
+  }
+
+  &-pagination {
+    height: 12px;
+
+    &-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: #dddddd;
+      opacity: 1;
+    }
+
+    &-bullet-active {
+        background-color: #b5b6bc;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    &::after {
+      background: none;
+    }
+  }
+}
